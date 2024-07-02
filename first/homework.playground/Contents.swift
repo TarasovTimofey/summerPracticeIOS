@@ -102,6 +102,23 @@ func createCar(type: String) -> Car? {
 var newCar = Car(brand: "BMW", model: "M4", dateOfRelease:2021, avgSpeed: 100)
 newCar.printInfo();
 
+func printCar(type: String) -> Any? {
+    var car = createCar(type: type)
+    switch type {
+    case "BMW":
+        return car?.printInfo()
+    case "Lada":
+        return car?.printInfo()
+    case "Mercedes":
+        return car?.printInfo()
+    case "Volkswagen":
+        return car?.printInfo()
+    default:
+        return nil
+    }
+}
+    
+    
 if let car = createCar(type: "BMW") {
     car.printInfo()
 }
